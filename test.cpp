@@ -1,7 +1,7 @@
 #include "TwoFrameCalcRT.h"
 #include <iostream>
 #include <opencv2/highgui.hpp>
-
+using namespace Position;
 void run(const std::map<ImageID, cv::Mat> imgs,  //原始图像
                             const std::map<ImageID, cv::Mat> imgSegments,                 //语义分割图
                             const Mat33 InternalParam,
