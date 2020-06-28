@@ -1,0 +1,25 @@
+%YAML:1.0
+
+#---------------------------------
+#hd data preprocess config file
+#---------------------------------
+ImgFps: 20  #图像帧率
+ImgRgb: 1   #rgb 1  rbg 0 
+ImgWd:  1920
+ImgHg:  1200
+#feature params
+FeatureCnt:   2000   #特征点提取最大数量
+PyramidLevel: 8     #图片金字塔层数
+ScaleFactor:  1.2   #图片金字塔缩小比
+SearchRadius: 3    #视觉匹配搜索范围
+MatchRatio:   0.5   #匹配比例(比例越大,匹配要求越低,匹配点越多)
+
+#set Mask
+MaskEnable: 1
+#set Roi only use when MaskEnable = 1  set roi value 0
+Lx: 0    #左上角x坐标  
+Ly: 0    #左上角y坐标
+Wd: 0    #宽
+Ht: 0    #高
+
+MultFeatDect: 1 # 1 for mult, 0 for sift
