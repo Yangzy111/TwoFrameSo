@@ -4,32 +4,32 @@
 #include <vector>
 #include <string>
 
-struct ImageExtrinsics
-{
-      int seqNum;              
-      char name[200];        //图像名
-      int gpsFixType;
-      double BLH[3];
-      double Xs;
-      double Ys;
-      double Zs;
-      double ratation[9];
-      double speed[2];
-};
-
-typedef cv::Matx<double, 3, 1> Mat31;
-typedef cv::Matx<double, 3, 3> Mat33;
-typedef std::string ImageID;
-
-struct OriRT
-{
-      Mat33 R;
-      Mat31 T;
-      float  cfd;    //置信度
-};
-
 namespace Position
 {
+      struct ImageExtrinsics
+      {
+            int seqNum;              
+            char name[200];        //图像名
+            int gpsFixType;
+            double BLH[3];
+            double Xs;
+            double Ys;
+            double Zs;
+            double ratation[9];
+            double speed[2];
+      };
+
+      typedef cv::Matx<double, 3, 1> Mat31;
+      typedef cv::Matx<double, 3, 3> Mat33;
+      typedef std::string ImageID;
+
+      struct OriRT
+      {
+            Mat33 R;
+            Mat31 T;
+            float  cfd;    //置信度
+      };
+      
       class TwoFrameRTImpl;
       class TwoFrameCalcRT
       {
